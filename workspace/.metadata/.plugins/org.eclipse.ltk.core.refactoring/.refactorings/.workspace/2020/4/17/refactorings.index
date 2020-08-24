@@ -1,0 +1,4 @@
+1587698639786	Rename resource 'TestClient'
+1587698654470	Rename resource 'TestClient2'
+1587698698940	Delete resource 'rmiClient'
+1587698701183	Delete resource 'rmiServer'

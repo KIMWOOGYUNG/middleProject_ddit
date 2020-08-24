@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="820.0" style="-fx-background-color: white; -fx-background-radius: 50;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yaksa.member.controller.mypage.a1Controller">
+   <children>
+      <Pane layoutY="-5.0" prefHeight="530.0" prefWidth="884.0" style="-fx-background-color: #73bbff;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-5.0">
+         <children>
+            <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="43.0" mnemonicParsing="false" opacity="0.85" prefHeight="64.0" prefWidth="261.0" style="-fx-background-color: #f2fcff;" styleClass="button2" stylesheets="@../../css/mypage/fullpackstyling.css" textFill="#545454">
+               <effect>
+                  <InnerShadow choke="0.2" color="WHITE" />
+               </effect>
+               <graphic>
+                  <Text fx:id="Mem_Name" fill="#4d4d4d" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+               </graphic>
+            </Button>
+            <Button fx:id="Mem_Info_Update" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="493.0" layoutY="89.0" mnemonicParsing="false" onAction="#memInfoUpdateClick" opacity="0.85" prefHeight="64.0" prefWidth="261.0" styleClass="btnManage" stylesheets="@../../css/main/fullpackstyling.css" textFill="#8c80e8">
+               <effect>
+                  <InnerShadow choke="0.2" color="WHITE" />
+               </effect>
+               <graphic>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="정보수정" textAlignment="CENTER" wrappingWidth="166.984375">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="138.0" mnemonicParsing="false" opacity="0.85" prefHeight="345.0" prefWidth="261.0" style="-fx-background-color: #f2fcff;" styleClass="button2" stylesheets="@../../css/mypage/fullpackstyling.css" textFill="#545454">
+               <effect>
+                  <InnerShadow choke="0.2" color="WHITE" />
+               </effect>
+            </Button>
+            <Button fx:id="Mem_Delet" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="493.0" layoutY="222.0" mnemonicParsing="false" onAction="#memDeletClick" opacity="0.85" prefHeight="64.0" prefWidth="261.0" styleClass="btnManage" stylesheets="@../../css/main/fullpackstyling.css" textFill="#8c80e8">
+               <effect>
+                  <InnerShadow choke="0.2" color="WHITE" />
+               </effect>
+               <graphic>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="회원탈퇴" textAlignment="CENTER" wrappingWidth="166.984375">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+               </graphic>
+            </Button>
+            <Button fx:id="Mem_Visit" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="493.0" layoutY="357.0" mnemonicParsing="false" onAction="#memVisitClick" opacity="0.85" prefHeight="64.0" prefWidth="261.0" styleClass="btnManage" stylesheets="@../../css/main/fullpackstyling.css" textFill="#8c80e8">
+               <effect>
+                  <InnerShadow choke="0.2" color="WHITE" />
+               </effect>
+               <graphic>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="방문 약국 통계" textAlignment="CENTER" wrappingWidth="220.984375">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+               </graphic>
+            </Button>
+            <Text fx:id="Mem_Info" fill="#4d4d4d" layoutX="159.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="169.4921950697899">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="Mem_Info1" fill="#4d4d4d" layoutX="157.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="155.49217820167542">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="Mem_Info2" fill="#434343" layoutX="157.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" wrappingWidth="155.4921828508377">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="Mem_Info3" fill="#4d4d4d" layoutX="159.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="57.49217391014099">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fx:id="Mem_Info4" fill="#434343" layoutX="235.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" wrappingWidth="88.49218285083771">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fx:id="Mem_Info5" fill="#434343" layoutX="91.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I    D :" wrappingWidth="68.49218785762787">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="Mem_Info51" fill="#434343" layoutX="91.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="생 일 :" wrappingWidth="68.49218785762787">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="Mem_Info511" fill="#434343" layoutX="91.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="성 별 :" wrappingWidth="68.49218785762787">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="Mem_Info5111" fill="#434343" layoutX="91.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" wrappingWidth="68.4921875">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="Mem_Info41" fill="#434343" layoutX="215.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@" wrappingWidth="13.492185592651367">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Button fx:id="cancleBtn" layoutX="782.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: white;" text="X" textFill="#222222">
+               <effect>
+                  <InnerShadow color="#8a8a8a" />
+               </effect>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

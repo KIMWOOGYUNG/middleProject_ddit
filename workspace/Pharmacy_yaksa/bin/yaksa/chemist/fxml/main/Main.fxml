@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="outerBoarderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yaksa.chemist.controller.main.MainController">
+   <left>
+      <VBox prefHeight="512.0" prefWidth="260.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefWidth="260.0" />
+            <Pane layoutY="130.0" prefHeight="61.0" prefWidth="262.0" style="-fx-background-color: #a7dcfc;">
+               <children>
+                  <Label fx:id="labelMenu" layoutX="42.0" layoutY="10.0" text="Main Page" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <InnerShadow color="WHITE" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="40.0" top="4.0" />
+               </VBox.margin>
+            </Pane>
+            <Button fx:id="btnManagePres" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#managePres" prefHeight="60.0" prefWidth="262.0" styleClass="button1" stylesheets="@../../css/main/fullpackstyling.css" text="처방 관리" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/main/receipt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="WHITE" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnManagePharm" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#managePharm" prefHeight="60.0" prefWidth="262.0" styleClass="button1" stylesheets="@../../css/main/fullpackstyling.css" text="약국 관리" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/main/heart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="WHITE" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnManageInven" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#manageInven" prefHeight="60.0" prefWidth="262.0" styleClass="button1" stylesheets="@../../css/main/fullpackstyling.css" text="재고 관리" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/main/drug-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="WHITE" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnStaitcs" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#statics" prefHeight="60.0" prefWidth="262.0" styleClass="button1" stylesheets="@../../css/main/fullpackstyling.css" text="통계" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/main/prescription.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="WHITE" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <TextArea prefHeight="96.0" prefWidth="260.0" style="-fx-background-color: #e3e3e3; -fx-text-fill: grey;" text="&#10;TEL 055-1234-1234&#10;E-MAIL hello1234@naver.com&#10;대전광역시 중구 선화동 영민빌딩 202호&#10;&#10;Copyright © YAKSA Corp. All rights reserved.">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TextArea>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane fx:id="innerBoardPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <Pane fx:id="centerPane" prefHeight="541.0" prefWidth="820.0" style="-fx-background-color: #73bbff;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </center>
+   <top>
+      <Pane prefHeight="114.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="logo" fitHeight="230.0" fitWidth="230.0" layoutX="14.0" layoutY="25.0" onMouseClicked="#gotoMain" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/main/mainLogo.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="260.0" prefHeight="122.0" prefWidth="820.0" style="-fx-background-color: #73bbff;">
+               <children>
+                  <ImageView fx:id="btnChatting" fitHeight="50.0" fitWidth="50.0" layoutX="413.0" layoutY="10.0" onDragDetected="#chatting" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/main/mail.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="577.0" layoutY="26.0" text="님 환영합니다 :)" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnLogout" layoutX="679.0" layoutY="21.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #73bbff;" text="로그아웃" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnClose" layoutX="774.0" layoutY="24.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: white;" text="X">
+                     <effect>
+                        <InnerShadow color="#d3d3d3" />
+                     </effect>
+                  </Button>
+                  <Label fx:id="lblTime" alignment="CENTER" layoutX="218.0" layoutY="18.0" prefHeight="35.0" prefWidth="195.0" text="2020-00-00 00:00:00" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="namelb" layoutX="498.0" layoutY="26.0" prefHeight="18.0" prefWidth="75.0" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </Pane>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>

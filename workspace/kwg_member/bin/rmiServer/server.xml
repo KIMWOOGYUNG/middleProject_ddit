@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	<!-- 위 부분은 똑같이 써야함 -->
+	
+<sqlMap namespace="prescription">
+	<insert id="insertPres" parameterClass="Vo">
+		insert into phar_inbox(phar_messnum, phar_memid, phar_check, pharm_id, phar_file, phar_inboxdate) values (1, #mem_id#, null, #pharm_id#, #file#, sysdate)
+	</insert>
+	
+</sqlMap>

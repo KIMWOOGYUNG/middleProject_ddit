@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #e8e8e8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PicUploadController">
+   <children>
+      <Label layoutX="45.0" layoutY="51.0" text="처방전 보내실 방법을 선택하세요">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="39.0" layoutY="184.0" mnemonicParsing="false" style="-fx-background-color: white;" text="사진 업로드">
+         <effect>
+            <InnerShadow color="#c6c6c6" />
+         </effect>
+      </Button>
+      <Button layoutX="188.0" layoutY="184.0" mnemonicParsing="false" style="-fx-background-color: white;" text="QR Code">
+         <effect>
+            <InnerShadow color="#c6c6c6" />
+         </effect>
+      </Button>
+      <Button layoutX="130.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: white;" text="취소">
+         <effect>
+            <InnerShadow color="#c9c9c9" />
+         </effect>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="69.0" fitWidth="134.0" layoutX="29.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/camera.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="82.0" fitWidth="134.0" layoutX="175.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/qr.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn" layoutX="64.0" layoutY="240.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>

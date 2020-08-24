@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541" prefWidth="820.0" style="-fx-background-color: #73bbff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yaksa.member.controller.prescription.ReceiptController">
+   <children>
+      <TableView fx:id="table" layoutX="28.0" layoutY="28.0" onMouseClicked="#tableClick" prefHeight="474.0" prefWidth="763.0">
+        <columns>
+          <TableColumn fx:id="colRcNum" prefWidth="140.0" text="영수증 번호" />
+          <TableColumn fx:id="colPharmName" prefWidth="201.0" text="약국명" />
+            <TableColumn fx:id="colDate" prefWidth="235.0" text="날짜" />
+            <TableColumn fx:id="colStar" prefWidth="104.0" style="-fx-font-family: Consolas;" text="별점" />
+            <TableColumn fx:id="colRead" prefWidth="82.0" text="열람여부" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

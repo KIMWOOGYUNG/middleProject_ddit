@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" style="-fx-background-radius: 150;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yaksa.chemist.controller.inventory.PriceController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="300.0">
+         <children>
+            <AnchorPane prefHeight="250.0" prefWidth="300.0" style="-fx-background-radius: 150 150 0 0; -fx-background-color: #b0e9f7;">
+               <children>
+                  <Label layoutX="43.0" layoutY="113.0" prefHeight="35.0" prefWidth="138.0" text="판매가격 : " textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="43.0" layoutY="148.0" prefHeight="35.0" prefWidth="101.0" text="입고가격 : " textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outprice" layoutX="138.0" layoutY="119.0" prefHeight="23.0" prefWidth="101.0" />
+                  <TextField fx:id="inprice" layoutX="138.0" layoutY="154.0" prefHeight="23.0" prefWidth="101.0" />
+                  <Label layoutX="246.0" layoutY="120.0" text="원" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="246.0" layoutY="155.0" text="원" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 0 0 150 150; -fx-background-color: white;">
+               <children>
+                  <Button fx:id="btn" layoutX="70.0" layoutY="53.0" mnemonicParsing="false" onAction="#ok" prefHeight="35.0" prefWidth="63.0" style="-fx-background-color: #b0e9f7; -fx-background-radius: 50;" styleClass="button" stylesheets="@../../css/inventory/fullpackstyling.css" text="확인" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="WHITE" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btnCancel" layoutX="168.0" layoutY="53.0" mnemonicParsing="false" onAction="#cancel" prefHeight="35.0" prefWidth="63.0" style="-fx-background-color: #b0e9f7; -fx-background-radius: 50;" styleClass="button" stylesheets="@../../css/inventory/fullpackstyling.css" text="취소" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="WHITE" />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

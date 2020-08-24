@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	
+<sqlMap namespace="member">
+	<select id="getAllReceipt" resultClass="mem_inboxVo">
+		select a.INBOX_NUM, a.INBOX_MEMID, a.INBOX_CHECK, a.INBOX_PHID, a.INBOX_FILE, TO_CHAR(a.INBOX_DATE, 'YYYY-MM-DD')INBOX_DATE,
+		(select PHARM_NAME from PHARMACY b where a.INBOX_PHID = b.PHARM_ID) as pharm_name, 
+		(select app_ph_star from member_approve c where a.inbox_file = c.app_code) as star_rate, 
+		(select phpres_persue from pharmacy_prescription d where a.inbox_file = d.phpres_code) as persue
+		FROM MEMBER_INBOX a
+	</select>
+	
+	<select id="getAllPres" resultClass="phar_inboxVo">
+		select a.PHAR_MESSNUM, a.PHAR_MEMID, a.PHAR_CHECK, a.PHARM_ID, TO_CHAR(a.PHAR_INBOXDATE, 'YYYY-MM-DD')PHAR_INBOXDATE, a.PHAR_FILE, 
+		(select PHARM_NAME from PHARMACY b where a.PHARM_ID = b.PHARM_ID) as pharm_name
+		FROM PHAR_INBOX a
+	</select>
+	
+	<update id="updateRating" parameterClass="map">
+		UPDATE member_approve SET app_ph_star = #a#
+		WHERE app_code = #b#
+	</update>
+	
+	<update id="updatePersue" parameterClass="String">
+		UPDATE pharmacy_prescription SET phpres_persue = 'y'
+		WHERE phpres_code = #String#
+	</update>
+</sqlMap>

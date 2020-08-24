@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="mem">
+
+	<select id="getAllMember" resultClass="MemVo" parameterClass="String">	
+		select mem_name, mem_pw, mem_id, mem_regno1,mem_gender,mem_email1,mem_email2, mem_regno1, mem_regno2, mem_zip_code, mem_add1, mem_add2, mem_tel from member where mem_id='kjw0523'
+	</select>
+	
+	<update id="updateMember" parameterClass="MemVo">
+		update member set mem_pw = #mem_pw#,
+			mem_zip_code = #mem_zip_code#, mem_add1 = #mem_add1#,  mem_add2 = #mem_add2#
+			, mem_tel = #mem_tel#, mem_available = #mem_available#
+		where mem_id = 'kjw0523'
+	</update>
+	
+	
+</sqlMap>	
+
+
+
+
+
+
+
+

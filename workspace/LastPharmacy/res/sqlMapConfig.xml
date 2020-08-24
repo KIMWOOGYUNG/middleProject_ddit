@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig
+	PUBLIC "-//ibatis.apache.org//DTO SQL Map Config 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+	<!-- 위 부분은 똑같이 써야함 -->
+	
+<sqlMapConfig>
+	<!-- 
+		DB와 연결하는 정보를 properties파일에 설정해 놓고 이 properties파일의 내용을 읽어와 설정한다.
+	 -->
+	 <properties resource="dbinfo.properties"/>
+	 
+	 <!-- ibatis가 실행될 때 필요한 여러가지 옵션 설정하기 -->
+	 <!-- 보통 : maxRequests >= maxSessions >= maxTransactions 순으로 커야함-->
+	 <settings cacheModelsEnabled="true" enhancementEnabled="true" lazyLoadingEnabled="true" maxRequests="128" maxSessions="64" maxTransactions="16" useStatementNamespaces="true"/>
+	 
+	<!-- 우경(처방관리) -->
+	<typeAlias alias="inboxVo" type="yaksa.chemist.vo.prescription.InboxVO"/>	 
+	<typeAlias alias="pharmVo" type="yaksa.chemist.vo.prescription.PharmVO"/>	 
+	<typeAlias alias="memVo" type="yaksa.chemist.vo.prescription.MemberVO"/>	 
+	<typeAlias alias="invVo" type="yaksa.chemist.vo.prescription.InventoryVO"/>	 
+	<typeAlias alias="rcVo" type="yaksa.chemist.vo.prescription.ReceiptVO"/>	 
+	<typeAlias alias="saleVo" type="yaksa.chemist.vo.prescription.SaleVO"/>	 
+	<typeAlias alias="presVo" type="yaksa.chemist.vo.prescription.PrescriptionVO"/>	 
+	<typeAlias alias="memInboxVo" type="yaksa.chemist.vo.prescription.Mem_InboxVO"/>
+	
+	<!-- 준우(재고관리) -->	 
+	<typeAlias alias="MemVo2" type="yaksa.member.vo.mypage.MemVo"/>
+	<typeAlias alias="PharmVo2" type="yaksa.chemist.vo.inventory.PharmVo"/>
+	<typeAlias alias="medVo2" type="yaksa.chemist.vo.inventory.medVO"/>
+	<typeAlias alias="invVO2" type="yaksa.chemist.vo.inventory.invVO"/>
+	<typeAlias alias="insertVO2" type="yaksa.chemist.vo.inventory.insertVO"/>
+	<typeAlias alias="saleVO2" type="yaksa.chemist.vo.inventory.saleVO"/>
+	
+	<!-- 아름(로그인) -->
+	<typeAlias alias="ChemistVO" type="yaksa.chemist.vo.join.ChemistVO"/>
+	
+	<!-- 수진(약국관리,통계) -->
+	<typeAlias alias="PharmPres" type="yaksa.chemist.vo.chart.PharmPresVO"/>
+	<typeAlias alias = "PVO" type="yaksa.chemist.vo.manage.PharmVO"/>
+	<typeAlias alias = "PharmVO3" type="yaksa.chemist.vo.chart.PharmVO"/>
+	
+	 
+	 <!-- DB와 연동하기 ==> 위에서 읽어온 properties파일의 내용으로 설정한다.-->
+	 <transactionManager type="JDBC">
+	 	<dataSource type="SIMPLE">
+	 		<property name="JDBC.Driver" value="${driver}"/>
+	 		<property name="JDBC.ConnectionURL" value="${url}"/>
+	 		<property name="JDBC.Username" value="${user}"/>
+	 		<property name="JDBC.Password" value="${pass}"/>
+	 	</dataSource>
+	 </transactionManager>
+	 
+	  <!-- 우경(처방관리) -->
+	  <sqlMap resource="yaksa/chemist/ibatis/prescription/pharm.xml"/>
+	  
+	  <!-- 준우(재고관리) -->
+<!-- 	  <sqlMap resource="yaksa/member/ibatis/mypage/mem.xml"/> -->
+	  <sqlMap resource="yaksa/chemist/ibatis/inventory/pharm.xml"/>  
+	  
+	  <!-- 아름(로그인) -->
+	  <sqlMap resource="yaksa/chemist/ibatis/join/ChemistJoin.xml"/>  
+	  
+	  <!-- 수진(약국관리,통계) -->
+	  <sqlMap resource="yaksa/chemist/ibatis/chart/yaksachart.xml"/>  
+	  <sqlMap resource="yaksa/chemist/ibatis/manage/yaksamanage.xml"/>  
+</sqlMapConfig>

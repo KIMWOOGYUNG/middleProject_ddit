@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	<!-- 위 부분은 똑같이 써야함 -->
+	
+<sqlMap namespace="prescription">
+
+	<select id="getAllReceipt" resultClass="memInboxVo">
+		select INBOX_NUM, INBOX_MEMID, INBOX_CHECK, INBOX_PHID, INBOX_FILE, to_char(INBOX_DATE, 'YYYY-MM-DD')INBOX_DATE from member_inbox 
+	</select>
+	
+	<select id="getAllPrescription" resultClass="inboxVo">
+		select phar_messnum, phar_memid, phar_check, pharm_id, phar_file, to_char(phar_inboxdate, 'YYYY-MM-DD')phar_inboxdate from phar_inbox 
+	</select>
+	
+	<update id="acceptPrescription" parameterClass="int">
+		update phar_inbox set phar_check = '1' where phar_messnum = #int# 
+	</update>
+	
+	<update id="rejectPrescription" parameterClass="int">
+		update phar_inbox set phar_check = '2' where phar_messnum = #int# 
+	</update>
+	
+	<select id="getPharmacy" resultClass="pharmVo" parameterClass="String">
+		select * from pharmacy where pharm_id=#String#
+	</select>
+	
+	<select id="getMember" resultClass="memVo" parameterClass="String">
+		select * from member where mem_id=#String#
+	</select>
+	
+	<select id="getAllInventory" resultClass="invVo">
+		select a.inven_num, a.inven_phid, a.inven_code, a.inven_remain, a.inven_inprice, a.inven_outprice, 
+        (select medi_name from medicine b where a.inven_code = b.medi_code) as inven_YakName
+		from medicine_inventory a
+	</select>
+	
+	<select id= "getYakName" parameterClass="String" resultClass = "String">
+		select medi_name from Medicine where medi_code = #String#
+	</select>
+	
+	<select id="searchMedicine" parameterClass="String" resultClass="invVo">
+		select a.inven_num, a.inven_phid, a.inven_code, a.inven_remain, a.inven_inprice, a.inven_outprice, 
+        (select medi_name from medicine b where a.inven_code = b.medi_code) as inven_YakName
+		from medicine_inventory a
+		where (select medi_name from medicine b where a.inven_code = b.medi_code) like '%$String$%'
+	</select>
+	
+	<insert id="insertMediSale" parameterClass="saleVo">
+		insert into medicine_sale values(medi_sale.nextval, #sale_cnt#, sysdate, #sale_inventory#, #sale_sumprice#)
+	</insert>
+	
+	<insert id="insertPrescription" parameterClass="presVo">
+		insert into pharmacy_prescription values(#phpres_code#, sysdate, sysdate+365, 'n', #pharm_id#, #mem_id#)
+	</insert>
+	
+	<insert id="insertHistory" parameterClass="rcVo">
+		insert into pharmacy_history values(#phpres_code#, #phpres_medlcode#, #phpres_total_admin#, #phpres_taking_time#, #phpres_prladmin#, #phpres_salecnt#, #phpres_admin_day#, history_seq.nextval)
+	</insert>
+	
+	
+</sqlMap>

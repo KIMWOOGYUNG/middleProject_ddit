@@ -1,0 +1,5 @@
+package yaksa.pharmacy.vo;
+
+public interface PharmacyVO {
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="content" prefHeight="524.0" prefWidth="541.0" style="-fx-background-color: #b0e9f7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ReceiveController">
+   <children>
+      <TableView fx:id="table" layoutX="56.0" layoutY="79.0" onSort="#clickTable" prefHeight="406.0" prefWidth="428.0">
+        <columns>
+          <TableColumn fx:id="colNum" prefWidth="142.0" text="요청된 처방전 번호" />
+          <TableColumn fx:id="colDate" prefWidth="125.0" text="날짜" />
+            <TableColumn fx:id="colMemId" minWidth="0.0" prefWidth="160.0" text="환자아이디" />
+        </columns>
+      </TableView>
+      <Label layoutX="191.0" layoutY="28.0" text="받은 처방전 목록" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

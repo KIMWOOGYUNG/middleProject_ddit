@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig
+	PUBLIC "-//ibatis.apache.org//DTO SQL Map Config 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+	<!-- 위 부분은 똑같이 써야함 -->
+	
+<sqlMapConfig>
+	<!-- 
+		DB와 연결하는 정보를 properties파일에 설정해 놓고 이 properties파일의 내용을 읽어와 설정한다.
+	 -->
+	 <properties resource="dbinfo.properties"/>
+	 
+	 <!-- ibatis가 실행될 때 필요한 여러가지 옵션 설정하기 -->
+	 <!-- 보통 : maxRequests >= maxSessions >= maxTransactions 순으로 커야함-->
+	 <settings cacheModelsEnabled="true" enhancementEnabled="true" lazyLoadingEnabled="true" maxRequests="128" maxSessions="64" maxTransactions="16" useStatementNamespaces="true"/>
+
+
+	 <typeAlias alias="inboxVo" type="yaksa.server.vo.prescription.InboxVO"/>
+	 <typeAlias alias="rcVo" type="yaksa.server.vo.prescription.ReceiptVO"/>
+	 
+	 <!-- 결제 -->
+	<typeAlias alias="payVo" type="yaksa.server.vo.pay.PayVO"/>	 
+	 
+	 
+	 <!-- DB와 연동하기 ==> 위에서 읽어온 properties파일의 내용으로 설정한다.-->
+	 <transactionManager type="JDBC">
+	 	<dataSource type="SIMPLE">
+	 		<property name="JDBC.Driver" value="${driver}"/>
+	 		<property name="JDBC.ConnectionURL" value="${url}"/>
+	 		<property name="JDBC.Username" value="${user}"/>
+	 		<property name="JDBC.Password" value="${pass}"/>
+	 	</dataSource>
+	 </transactionManager>
+	 
+	  <sqlMap resource="yaksa/server/ibatis/prescription/server.xml"/>
+	  
+	  <!-- 결제 -->
+	<sqlMap resource="yaksa/server/ibatis/pay/pay.xml"/>
+
+</sqlMapConfig>

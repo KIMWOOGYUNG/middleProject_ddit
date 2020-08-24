@@ -1,0 +1,13 @@
+1586755410653	Rename package 'application'
+1586755497177	Rename package 'PharmVO'
+1586755530481	Rename package 'IPharmDao'
+1586755574746	Rename package 'iPharmDao'
+1586756468137	Rename package 'pharmVO'
+1586756487183	Rename package 'pharmService'
+1586756497812	Rename package 'pharmFxml'
+1586756506147	Rename package 'pharmDao'
+1586756517226	Rename package 'main'
+1586756764911	Rename type 'Main'
+1586756836550	Rename type 'PharmacyService'
+1587090103648	Rename type 'PharmacyVO'
+1587090150073	Delete element

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	
+<sqlMap namespace = "pill">
+	<select id = "getAllPill" resultClass = "PillVO">
+		select * from medicine
+	</select>
+	
+	<select id = "getSearchPill" parameterClass = "String" resultClass = "PillVO">
+		select * from medicine where medi_name like '%' || #search# || '%'
+	</select>
+	
+	<select id = "getSearchPillNum" parameterClass = "String" resultClass = "PillVO">
+      select * from medicine where medi_code like '%' || #search# || '%'
+   </select>
+   
+   <select id = "getSearchPillFrom" parameterClass = "String" resultClass = "PillVO">
+      select * from medicine where medi_com like '%' || #search# || '%'
+   </select>
+	
+</sqlMap>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	<!-- 위 부분은 똑같이 써야함 -->
+	
+<sqlMap namespace="prescription">
+	<select id="chkFileName" parameterClass="String" resultClass="int"> 
+		select count(*) from phar_inbox where phar_file=#fileName#
+	</select>
+	
+	<insert id="insertPhar_inbox" parameterClass="inboxVo">
+		insert into phar_inbox(phar_messnum, phar_memid, phar_check, pharm_id, phar_file, phar_inboxdate) values (messnum_seq.nextval, #mem_id#, 0, #pharm_id#, #fileName#, sysdate)
+	</insert>
+	
+	<insert id="insertMem_inbox" parameterClass="rcVo">
+		insert into member_inbox values (meminbox_seq.nextval, #inbox_memid#, 0, #inbox_phid#, sysdate, #inbox_file#)
+	</insert>
+	
+	
+</sqlMap>

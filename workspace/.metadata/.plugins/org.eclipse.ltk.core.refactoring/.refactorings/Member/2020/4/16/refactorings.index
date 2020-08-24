@@ -1,0 +1,32 @@
+1586755415972	Rename package 'application'
+1586755482817	Rename package 'MemVO'
+1586755546998	Rename package 'IMemDao'
+1586755566132	Rename package 'iMemDao'
+1586755902662	Rename package 'main'
+1586755914506	Rename package 'memDao'
+1586755922750	Rename package 'memVO'
+1586755930442	Rename package 'memService'
+1586755940115	Rename package 'yaksa.member.Dao'
+1586755944226	Rename package 'yaksa.member.Service'
+1586755950398	Rename package 'yaksa.member.VO'
+1586755957319	Rename package 'memFxml'
+1586756202460	Rename type 'Main'
+1587089675485	Delete element
+1587089687119	Delete element
+1587089793763	Rename type 'Main'
+1587089852474	Delete element
+1587090034998	Delete element
+1587090368231	Delete element
+1587091404152	Rename package 'yaksa.member'
+1587091415907	Rename package 'yaksa.member.main'
+1587091425143	Rename package 'yaksa.member.ibatis'
+1587091433106	Rename package 'yaksa.member.fxml'
+1587091455320	Rename package 'yaksa.memberp.mainpage.fxml'
+1587091462986	Rename package 'yaksa.member.dao'
+1587091478014	Rename package 'yaksa.member.service'
+1587091483600	Rename package 'yaksa.member.vo'
+1587091520507	Delete element
+1587091537872	Delete element
+1587091603978	Rename package 'css'
+1587125719167	Delete element
+1587125729873	Delete element

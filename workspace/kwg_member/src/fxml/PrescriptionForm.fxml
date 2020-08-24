@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="499.0" style="-fx-border-color: #3f95e0; -fx-border-width: 3; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="105.0" prefWidth="499.0">
+         <children>
+            <Pane prefHeight="107.0" prefWidth="499.0" style="-fx-border-color: #3f95e0; -fx-border-width: 3;">
+               <children>
+                  <Label alignment="CENTER" layoutX="65.0" layoutY="22.0" prefHeight="42.0" prefWidth="370.0" text="처방 영수증" textAlignment="RIGHT">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="84.0" text="영수증 코드" />
+                  <Label fx:id="code" layoutX="92.0" layoutY="84.0" prefHeight="15.0" prefWidth="53.0" text="000000" />
+                  <Line endX="343.0" fill="WHITE" layoutX="156.0" layoutY="81.0" startX="-156.0" stroke="#0045a1" />
+                  <Label layoutX="156.0" layoutY="84.0" text="날짜" />
+                  <Label fx:id="date" layoutX="195.0" layoutY="84.0" text="0000년 00월 00일 " />
+                  <Label layoutX="323.0" layoutY="84.0" text="발행인" />
+                  <Label layoutX="372.0" layoutY="84.0" text="김준우" />
+                  <ImageView fitHeight="68.0" fitWidth="83.0" layoutX="417.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/stamp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <TableView layoutY="248.0" prefHeight="200.0" prefWidth="499.0" style="-fx-border-width: 3; -fx-border-color: #3f95e0;">
+        <columns>
+          <TableColumn prefWidth="174.0" style="-fx-background-color: #84bdf0; -fx-border-color: #3f95e0; -fx-border-width: 1;" text="처 방 의 약 품 의 명 칭" />
+          <TableColumn minWidth="0.0" prefWidth="66.0" style="-fx-background-color: #84bdf0; -fx-border-color: #3f95e0; -fx-border-width: 1;" text="1회 투여량" />
+            <TableColumn prefWidth="79.0" style="-fx-background-color: #84bdf0; -fx-border-color: #3f95e0; -fx-border-width: 1;" text="1회 투여횟수" />
+            <TableColumn prefWidth="59.0" style="-fx-background-color: #84bdf0; -fx-border-color: #3f95e0; -fx-border-width: 1;" text="투약 일수" />
+            <TableColumn prefWidth="120.0" style="-fx-background-color: #84bdf0; -fx-border-color: #3f95e0; -fx-border-width: 1;" text="용           법" />
+        </columns>
+      </TableView>
+      <Line endX="-135.0" endY="1.5" fill="WHITE" layoutX="170.0" layoutY="171.0" startX="-135.0" startY="-66.0" stroke="#0045a1" />
+      <Line endX="100.0" fill="WHITE" layoutX="137.0" layoutY="172.0" startX="-137.0" stroke="#0045a1" />
+      <Line endX="-135.0" endY="77.0" fill="WHITE" layoutX="372.0" layoutY="171.0" startX="-135.0" startY="-66.0" stroke="#0045a1" />
+      <Line endX="100.0" fill="WHITE" layoutX="136.0" layoutY="137.0" startX="-100.0" stroke="#0045a1" />
+      <Line endX="-134.5" endY="0.5" fill="WHITE" layoutX="253.0" layoutY="172.0" startX="-135.0" startY="-66.0" stroke="#0045a1" />
+      <Line endX="-135.0" endY="77.0" fill="WHITE" layoutX="405.0" layoutY="171.0" startX="-135.0" startY="-66.0" stroke="#0045a1" />
+      <Line endX="-135.0" endY="77.0" fill="WHITE" layoutX="469.0" layoutY="171.0" startX="-135.0" startY="-66.0" stroke="#0045a1" />
+      <Line endX="91.0" fill="WHITE" layoutX="408.0" layoutY="134.0" startX="-137.0" stroke="#0045a1" />
+      <Line endX="91.0" fill="WHITE" layoutX="408.0" layoutY="165.0" startX="-137.0" stroke="#0045a1" />
+      <Line endX="91.0" fill="WHITE" layoutX="408.0" layoutY="194.0" startX="-137.0" stroke="#0045a1" />
+      <Line endX="91.0" fill="WHITE" layoutX="408.0" layoutY="222.0" startX="-137.0" stroke="#0045a1" />
+      <Label layoutX="285.0" layoutY="113.0" text="약국명" />
+      <Label layoutX="285.0" layoutY="145.0" text="약사명" />
+      <Label layoutX="293.0" layoutY="173.0" text="TEL" />
+      <Label layoutX="285.0" layoutY="202.0" text="이메일" />
+      <Label layoutX="291.0" layoutY="228.0" text="주소" />
+      <Label layoutX="61.0" layoutY="114.0" text="성 명" />
+      <Label layoutX="40.0" layoutY="148.0" text="주민등록번호" />
+      <Label layoutX="12.0" layoutY="117.0" text="환">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="144.0" text="자">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="128.0" text="의">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="160.0" text="료">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="187.0" text="기">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="214.0" text="관">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="114.0" prefHeight="15.0" prefWidth="83.0" text="김우경" />
+      <Label layoutX="128.0" layoutY="148.0" text="950000-123456" />
+      <Label layoutX="391.0" layoutY="113.0" text="준우약국" />
+      <Label layoutX="397.0" layoutY="145.0" text="김준우" />
+      <Label layoutX="373.0" layoutY="173.0" text="04212345678" />
+      <Label layoutX="361.0" layoutY="201.0" text="jj1234@naver.com" />
+      <Label layoutX="346.0" layoutY="228.0" text="대전 중구청 영민빌딩 2층" />
+      <Line endX="-135.0" endY="24.5" fill="WHITE" layoutX="209.0" layoutY="223.0" startX="-135.0" startY="-50.5" stroke="#0045a1" />
+      <Line endX="100.0" fill="WHITE" layoutX="136.0" layoutY="199.0" startX="-137.0" stroke="#0045a1" />
+      <Label layoutX="22.0" layoutY="178.0" text="결제일" />
+      <Line endX="100.0" fill="WHITE" layoutX="137.0" layoutY="224.0" startX="-137.0" stroke="#0045a1" />
+      <Label layoutX="26.0" layoutY="205.0" text="가격" />
+      <Label layoutX="16.0" layoutY="228.0" text="결제수단" />
+   </children>
+</Pane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	
+<sqlMap namespace = "member">
+
+	<insert id = "addMember" parameterClass = "memberVO">
+		insert into member( mem_id, mem_pw, mem_name, mem_gender, mem_regno1, mem_regno2, mem_zip_code, mem_add1, mem_add2, mem_tel, mem_email1, mem_email2)
+		values(#mem_id#, #mem_pw#, #mem_name#, #mem_gender#, #mem_regno1#, #mem_regno2#, #mem_zip_code#, #mem_add1#, #mem_add2#, #mem_tel#, #mem_email1#, #mem_email2#)
+	</insert>
+	
+	<select id = "SelectMember" resultClass = "int" parameterClass = "String">
+		select count(*) mem_id from member where mem_id = #mem_id# 
+	</select>
+	
+	<select id = "SearchNameMember" resultClass = "int" parameterClass = "String">
+		select count(*) mem_name from member where mem_name=#mem_name#
+	</select>
+	
+	<select id = "SearchRegMember" resultClass = "int" parameterClass = "String">
+		select count(*) mem_regno1 from member where mem_regno1=#mem_regno1#
+	</select>
+	
+	<select id = "LoginMember" resultClass = "int" parameterClass = "String">
+		select count(*) mem_pw from member where mem_pw=#mem_pw#
+	</select>
+	
+	<select id = "getMember" resultClass = "memberVO" parameterClass = "map">
+		select * from member where mem_pw=#mem_pw# and mem_id = #mem_id# 
+	</select>
+	
+	<select id = "getMemberId" resultClass = "memberVO" parameterClass = "map">
+		select * from member where mem_email1=#mem_email1# and mem_email2 = #mem_email2# and mem_name = #mem_name# and mem_regno1 = #mem_regno1#
+	</select>
+	
+	<update id = "updateZipNum" parameterClass="memberVO">
+		update member set mem_zip_code = #mem_zip_code#, mem_add1 = #mem_add1# where mem_id = #mem_id#
+	</update>
+	
+	<!-- <select id = "SearchId" parameterClass="map" resultClass="memberVO">
+		select * from member where $field$ like '%' || #search# || '%'
+	</select> --> 
+	
+</sqlMap>
+	
+	

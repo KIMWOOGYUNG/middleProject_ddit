@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="prod">
+
+     
+     <select id = "getMedical" resultClass="medVO">
+     select * from medicine
+     </select>
+     
+ 	<insert id="insertMedical" parameterClass="invVO">
+ 		insert into medicine_inventory(inven_num, inven_phid, inven_code,inven_remain,
+ 									    inven_inprice, inven_outprice)
+ 		values(seq_inven.nextVal,'a001', #inven_code#, 0, #inven_inprice#, #inven_outprice#)	
+ 	</insert>
+
+	<select id= "getMedical_inventory" resultClass="invVO">
+		select 	a.inven_num, a.inven_code, b.medi_name, a.inven_remain
+		  from medicine_inventory a, medicine b
+			where a.inven_phid ='a001'
+			and a.inven_code = b.medi_code
+	</select>
+	
+	<select id="getMedicine_insert"  resultClass="insertVo">
+	
+	  select c.insert_num, (a.inven_inprice * c.insert_cnt) as inven_inprice, b.medi_name, c.insert_inventory, c.insert_date, c.insert_cnt, (b.medi_code) as inven_code
+   from medicine_inventory a, medicine b, medicine_insert c
+   where c.INSERT_INVENTORY = a.inven_num
+   and a.INVEN_code = b.medi_code
+   and a.inven_phid = 'a001'
+	
+	
+	</select>
+	
+	<select id ="getMedicine_sale" resultClass="saleVO">
+	
+	  select c.sale_salenum, (a.inven_outprice * c.sale_cnt) as inven_outprice, b.medi_name, c.sale_inventory, c.sale_saledate, c.sale_cnt, (b.medi_code) as inven_code
+  from medicine_inventory a, medicine b, medicine_sale c
+  where c.sale_inventory = a.inven_num
+  and a.inven_code = b.medi_code
+  and a.inven_phid = 'a001'
+	
+	</select>
+	
+	<insert id = "medicine_insert" parameterClass = "insertVo">
+	
+	insert into medicine_insert values (INSERT_SEQ.nextval,#insert_cnt#,sysdate,#insert_inventory#)
+	</insert>
+
+
+
+</sqlMap>

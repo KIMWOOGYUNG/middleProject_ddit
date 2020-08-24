@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="820.0" style="-fx-background-color: white; -fx-background-radius: 50;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yaksa.member.controller.mypage.a4Controller">
+   <children>
+      <Pane layoutY="-5.0" prefHeight="530.0" prefWidth="820.0" style="-fx-background-color: #73bbff; -fx-background-radius: 50;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-5.0">
+         <children>
+            <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutY="3.0" mnemonicParsing="false" opacity="0.85" prefHeight="524.0" prefWidth="820.0" styleClass="button2" stylesheets="@../../css/mypage/fullpackstyling.css">
+               <effect>
+                  <InnerShadow choke="0.21" color="WHITE" />
+               </effect>
+            </Button>
+            <BarChart layoutX="37.0" layoutY="130.0" prefHeight="356.0" prefWidth="744.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="295.0" layoutY="44.0" mnemonicParsing="false" opacity="0.85" prefHeight="64.0" prefWidth="192.0" style="-fx-background-color: #f2fcff;" styleClass="button2" stylesheets="@../../css/mypage/fullpackstyling.css" textFill="#8c80e8">
+               <effect>
+                  <InnerShadow choke="0.2" color="WHITE" />
+               </effect>
+            </Button>
+            <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="43.0" mnemonicParsing="false" opacity="0.85" prefHeight="64.0" prefWidth="192.0" style="-fx-background-color: #f2fcff;" styleClass="button2" stylesheets="@../../css/mypage/fullpackstyling.css" textFill="#8c80e8">
+               <effect>
+                  <InnerShadow choke="0.2" color="WHITE" />
+               </effect>
+            </Button>
+            <Text fill="#0739ff" layoutX="125.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="김우경 님">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#0739ff" layoutX="312.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="방문 약국 통계" wrappingWidth="166.984375">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

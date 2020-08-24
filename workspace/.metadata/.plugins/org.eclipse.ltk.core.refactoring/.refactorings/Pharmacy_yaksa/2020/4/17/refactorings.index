@@ -1,0 +1,42 @@
+1587348820716	Delete element
+1587349010922	Delete elements
+1587349619333	Delete element
+1587350126470	Rename resource 'PriscriptManage.fxml'
+1587352086516	Rename type 'presPreviewController'
+1587361519796	Delete element
+1587428591862	Copy file
+1587428725360	Rename resource 'PrescriptPreview2.fxml'
+1587434473927	Copy file
+1587434746599	Copy compilation unit
+1587442231857	Delete element
+1587445159494	Rename type 'inventoryVO'
+1587451894913	Rename type 'AddMedicine'
+1587526414094	Rename type 'PrescriptionVO'
+1587537706445	Copy compilation unit
+1587609557645	Copy package
+1587609776367	Copy files
+1587639761374	Delete element
+1587641973801	Delete element
+1587698884582	Rename package 'css'
+1587698905832	Rename package 'vo'
+1587698922544	Rename package 'yaksa.chemist.css.prescription'
+1587698929740	Rename package 'yaksa.chemist.css.main'
+1587698938501	Rename package 'util'
+1587698943098	Rename package 'service'
+1587698962927	Rename package 'rmiCommon'
+1587698970732	Rename package 'img'
+1587698975917	Rename package 'ibatis'
+1587698980244	Rename package 'fxml'
+1587698985816	Rename package 'dao'
+1587699010920	Rename package 'application'
+1587699031597	Move compilation unit
+1587699038415	Delete element
+1587699279483	Delete element
+1587699736003	Delete element
+1587705243466	Delete element
+1587725162770	Rename package 'yaksa.chemist.dao.prescription.inventory'
+1587725188259	Rename package 'yaksa.chemist.ibatis.prescription.inventory'
+1587725214616	Rename package 'yaksa.chemist.service.prescription.inventory'
+1587725226257	Rename package 'yaksa.chemist.vo.prescription.inventory'
+1587725600040	Rename package 'yaksa.chemist.util.prescription'
+1587782837890	Rename resource 'inventory.fxml'

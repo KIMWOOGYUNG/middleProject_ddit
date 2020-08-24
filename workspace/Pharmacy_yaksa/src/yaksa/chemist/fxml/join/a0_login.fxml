@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yaksa.chemist.controller.join.ChemistLoginController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="524.0" stroke="#73bbff" strokeType="INSIDE" width="820.0">
+         <fill>
+            <LinearGradient endX="0.49047619047619045" endY="1.0">
+               <stops>
+                  <Stop color="#fcfcfc" />
+                  <Stop color="#73bbff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <TextField fx:id="idTf" layoutX="446.0" layoutY="193.0" opacity="0.3" prefHeight="31.0" prefWidth="250.0" promptText="ID" style="-fx-background-radius: 10; -fx-background-color: #ffffff;">
+         <effect>
+            <InnerShadow color="#cccccc" />
+         </effect></TextField>
+      <Button fx:id="loginBtn" layoutX="483.0" layoutY="294.0" mnemonicParsing="false" onAction="#Login" prefHeight="24.0" prefWidth="68.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;" text="로그인">
+         <effect>
+            <InnerShadow color="#cccccc" />
+         </effect></Button>
+      <Button fx:id="JoinBtn" layoutX="583.0" layoutY="294.0" mnemonicParsing="false" onAction="#Join" prefHeight="24.0" prefWidth="86.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;" text="회원가입">
+         <effect>
+            <InnerShadow color="#cccccc" />
+         </effect></Button>
+      <Text fill="WHITE" layoutX="536.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id / pw가 기억나지 않는다면?" />
+      <ImageView fitHeight="103.0" fitWidth="246.0" layoutX="88.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/join/yaksa2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="lookIdBtn" layoutX="583.0" layoutY="384.0" mnemonicParsing="false" onAction="#LookId" prefHeight="24.0" prefWidth="68.0" style="-fx-background-color: #73bbff; -fx-background-radius: 10;" text="ID 찾기" textFill="WHITE" />
+      <Button fx:id="lookPwBtn" layoutX="653.0" layoutY="384.0" mnemonicParsing="false" onAction="#LookPwd" prefHeight="24.0" prefWidth="86.0" style="-fx-background-color: #73bbff; -fx-background-radius: 10;" text="PW 찾기" textFill="WHITE" />
+      <PasswordField fx:id="pwTf" layoutX="446.0" layoutY="239.0" opacity="0.3" prefHeight="31.0" prefWidth="250.0" promptText="PW" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <effect>
+            <InnerShadow color="#cccccc" />
+         </effect>
+      </PasswordField>
+      <Button fx:id="close" layoutX="782.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: white;" text="X">
+         <effect>
+            <InnerShadow color="#d3d3d3" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

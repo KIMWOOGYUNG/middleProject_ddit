@@ -1,0 +1,286 @@
+package yaksa.chemist.controller.main;
+
+import java.io.IOException;
+import java.net.URL;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.ResourceBundle;
+
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import yaksa.chemist.main.join.Chemist_Join;
+import yaksa.chemist.vo.join.ChemistVO;
+import yaksa.chemist.vo.join.SessionVO;
+import yaksa.server.rmiCommon.prescription.Controller;
+import yaksa.server.rmiCommon.prescription.ObYakSaBoard;
+import yaksa.server.rmiCommon.prescription.ServerConnect;
+
+public class MainController implements ObYakSaBoard {
+	
+	public static ChemistVO cheVO;
+	
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
+    private BorderPane outerBoarderPane;
+
+    @FXML
+    private ImageView logo;
+
+    @FXML
+    private Label labelMenu;
+
+    @FXML
+    private Button btnManagePres;
+
+    @FXML
+    private Button btnManagePharm;
+
+    @FXML
+    private Button btnManageInven;
+
+    @FXML
+    private Button btnStaitcs;
+
+    @FXML
+    private BorderPane innerBoardPane;
+
+    @FXML
+    private ImageView btnChatting;
+
+    @FXML
+    private Button btnLogout;
+
+    @FXML
+    private Button btnClose;
+  
+    @FXML
+    private Pane topPane;
+    
+    @FXML
+    private Pane centerPane;
+    
+    @FXML
+    private Label lblTime;
+    
+    @FXML
+    private Label namelb;
+    Controller controller;
+    ObYakSaBoard yaksaboard;
+
+    @FXML
+    void chatting(MouseEvent event) {
+
+    }
+
+    @FXML
+    void close(ActionEvent event) {
+    	Stage stage = (Stage) btnClose.getScene().getWindow();
+    	stage.close();
+    }
+
+    @FXML
+    void managePres(ActionEvent event) {
+    	try {
+			Parent childroot = FXMLLoader.load(getClass().getResource("../../fxml/prescription/PrescriptManage.fxml"));
+    		outerBoarderPane.setCenter(childroot);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    	
+    	labelMenu.setText("처방 관리");
+    }
+
+    @FXML
+    void gotoMain(MouseEvent event) {
+    	try {
+			Parent childroot = FXMLLoader.load(getClass().getResource("../../fxml/main/MainCenter.fxml"));
+    		outerBoarderPane.setCenter(childroot);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    	labelMenu.setText("Main Page");
+    }
+
+    @FXML
+    void logout(ActionEvent event) {
+    	yaksa.chemist.vo.join.SessionVO.loginChemist = null;
+    	Stage stage = (Stage) btnClose.getScene().getWindow();      
+        stage.close();
+    }
+
+    @FXML
+    void statics(ActionEvent event) {
+    	try {
+			Parent childroot = FXMLLoader.load(getClass().getResource("../../fxml/chart/YKChart.fxml"));
+    		outerBoarderPane.setCenter(childroot);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    	    	
+    	
+    	labelMenu.setText("통계");
+    }
+
+    @FXML
+    void managePharm(ActionEvent event) {
+    	try {
+			Parent childroot = FXMLLoader.load(getClass().getResource("../../fxml/manage/YKManage.fxml"));
+    		outerBoarderPane.setCenter(childroot);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    	
+    	labelMenu.setText("약국 관리");
+    }
+
+    @FXML
+    void manageInven(ActionEvent event) {
+    	try {
+			Parent childroot = FXMLLoader.load(getClass().getResource("../../fxml/inventory/Inventory.fxml"));
+    		outerBoarderPane.setCenter(childroot);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    	
+    	labelMenu.setText("재고 관리");
+    }
+    
+
+    @FXML
+    void initialize() {
+    	
+    	if(MainController.cheVO!=null) {
+    		System.out.println(cheVO.getPharm_name());
+    		namelb.setText(cheVO.getPharm_name());
+    	}else {
+    		namelb.setText("");
+    	}
+    	
+    	try {
+			Parent childroot = FXMLLoader.load(getClass().getResource("../../fxml/main/MainCenter.fxml"));
+    		outerBoarderPane.setCenter(childroot);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    	
+    	
+    	
+    	try {
+    		yaksaboard = new Mainimpl(this);
+			controller = ServerConnect.getServerConnector().getController();
+			controller.addYaksa(SessionVO.loginChemist.getPharm_id(), yaksaboard);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (NotBoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+    	
+    	Thread th = new Thread() {
+    		@Override
+    		public void run() {
+
+    			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    			
+    			while(true) {
+
+    				String strTime = sdf.format(new Date());
+
+    				Platform.runLater(() -> {	
+    					lblTime.setText(strTime);
+    				});			
+    				
+    				try {Thread.sleep(100);} catch (InterruptedException e) {}
+    			}
+    		}
+    	};//쓰레드 끝...
+    	th.setDaemon(true);
+    	th.start();
+    }
+
+	@Override
+	public boolean Popup(String ClientName) throws RemoteException {
+		
+		Platform.runLater( ()->{
+			
+			
+			
+			Stage stage = new Stage();
+			
+			Parent root;
+			try {
+				
+				FXMLLoader fxml = new FXMLLoader(MainController.class.getResource("MainAccept.fxml"));
+				root = fxml.load();
+				
+				MainAcceptCOntroller control = fxml.getController();
+				control.Accept.setOnAction(e->{
+					
+					
+					try {
+						controller.ApproveClient(ClientName, SessionVO.loginChemist.getPharm_id());
+					} catch (RemoteException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					
+					Stage Accept = (Stage) control.Accept.getScene().getWindow();
+					Accept.close();
+					
+				});
+				
+				control.Reject.setOnAction(e->{
+					
+					try {
+						controller.rejectClient(ClientName, SessionVO.loginChemist.getPharm_id());
+					} catch (RemoteException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					Stage Accept = (Stage) control.Accept.getScene().getWindow();
+					Accept.close();
+					
+					
+				});
+				stage.initStyle(StageStyle.TRANSPARENT); //
+				Scene scene = new Scene(root);
+				scene.setFill(Color.TRANSPARENT);	//
+				stage.setScene(scene);
+				stage.setTitle("확인");
+				stage.show();
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+		});
+		
+		
+		return false;
+	}
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541" prefWidth="820.0" style="-fx-background-color:  #73bbff" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yaksa.member.controller.prescription.PresController">
+   <children>
+      <TableView fx:id="table" layoutX="28.0" layoutY="28.0" onMouseClicked="#tableClick" prefHeight="474.0" prefWidth="763.0">
+        <columns>
+          <TableColumn fx:id="colRcNum" prefWidth="213.0" text="처방전 번호" />
+          <TableColumn fx:id="colPharmName" prefWidth="288.0" text="약국명" />
+            <TableColumn fx:id="colDate" prefWidth="261.0" text="날짜" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

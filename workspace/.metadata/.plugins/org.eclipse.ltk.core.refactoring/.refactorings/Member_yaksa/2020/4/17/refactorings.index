@@ -1,0 +1,102 @@
+1587340447942	Rename package 'application'
+1587340455483	Rename package 'fxml'
+1587340596688	Delete element
+1587340823122	Delete element
+1587341578890	Move compilation unit
+1587343659036	Rename type 'IService'
+1587343780537	Move compilation unit
+1587347983043	Copy package
+1587349261970	Delete element
+1587349265021	Delete element
+1587349267685	Delete element
+1587537753482	Delete element
+1587609415525	Delete element
+1587610440834	Encapsulate field 'pharm__name'
+1587620813132	Delete element
+1587620819485	Rename type 'a7'
+1587620824463	Rename type 'HelloRating'
+1587620860448	Delete element
+1587620865395	Rename resource 'a7_star.fxml'
+1587622193191	Copy file
+1587622276835	Copy compilation unit
+1587622475577	Rename type 'InboxVO'
+1587622488658	Rename type 'Phar_inboxVO'
+1587623432241	Copy file
+1587629417929	Copy file
+1587635854348	Copy compilation unit
+1587641339048	Delete element
+1587691061596	Move compilation unit
+1587691149655	Move compilation unit
+1587691186313	Rename type 'PicUploadController2'
+1587691200223	Rename type 'PreUploadController'
+1587691244333	Delete element
+1587691304562	Move compilation unit
+1587691313595	Move compilation unit
+1587691372282	Move compilation units
+1587691494997	Move compilation unit
+1587691539646	Move compilation units
+1587692127529	Move compilation unit
+1587692588810	Rename package 'vo'
+1587692603466	Rename package 'service'
+1587692621600	Rename package 'ibatis'
+1587692648993	Rename package 'util'
+1587692658848	Rename package 'rmiCommon'
+1587692682945	Rename package 'fxml2'
+1587692700038	Rename package 'css'
+1587692727483	Rename package 'yaksa.member.prescription.css'
+1587692742723	Rename package 'img'
+1587692748746	Rename package 'dao'
+1587692762677	Rename package 'yaksa.member.prescription.controller.rmiCommon'
+1587692977706	Move compilation unit
+1587693013611	Move compilation unit
+1587693039290	Delete element
+1587693043886	Move file
+1587693084542	Move file
+1587693091851	Delete element
+1587693097033	Move file
+1587693098834	Move file
+1587693158080	Rename resource 'yaksa2.png'
+1587693168390	Delete element
+1587693170977	Delete element
+1587693208564	Move files
+1587693264496	Move file
+1587694239616	Rename package 'yaksa.member.main.controller'
+1587694265304	Rename package 'yaksa.member.prescription.controller'
+1587694274851	Rename package 'yaksa.member.prescription.dao'
+1587694280824	Rename package 'yaksa.member.prescription.fxml'
+1587694288693	Rename package 'yaksa.member.prescription.ibatis'
+1587694297420	Rename package 'yaksa.member.prescription.main'
+1587694308199	Rename package 'yaksa.member.prescription.rmiCommon'
+1587694318164	Rename package 'yaksa.member.prescription.vo'
+1587694324380	Rename package 'yaksa.member.prescription.service'
+1587694332645	Rename package 'yaksa.member.prescription.img'
+1587694363860	Rename package 'yaksa.member.main.css'
+1587694368494	Rename package 'yaksa.member.main.fxml'
+1587694434069	Rename package 'yaksa.member.main.img'
+1587694454774	Rename package 'yaksa.member.prescription.util'
+1587695133127	Rename resource 'alert_re.fxml'
+1587695184042	Rename resource 'PicUpload.fxml'
+1587695279455	Rename resource 'PreUpload.fxml'
+1587698369033	Delete element
+1587698473134	Rename package 'yaksa.member.rmiCommon.prescription'
+1587701247994	Delete element
+1587704620815	Copy files
+1587704648831	Copy compilation units
+1587704698393	Copy compilation unit
+1587704987197	Copy file
+1587704998463	Copy file
+1587705040138	Copy file
+1587705204091	Copy file
+1587705247768	Copy file
+1587789829899	Rename package 'yaksa.member.vo.prescription.join'
+1587789846095	Rename package 'yaksa.member.service.prescription.join'
+1587789864617	Rename package 'yaksa.member.ibatis.prescription.join'
+1587789877257	Rename package 'yaksa.member.dao.prescription.join'
+1587789888496	Rename package 'yaksa.member.css.main.join'
+1587789952104	Rename package 'yaksa.member.main.main.calendar.join'
+1587792395725	Copy file
+1587792468211	Rename type 'Session'
+1587796579881	Delete element
+1587796647089	Delete element
+1587802398618	Delete element
+1587802852992	Delete element

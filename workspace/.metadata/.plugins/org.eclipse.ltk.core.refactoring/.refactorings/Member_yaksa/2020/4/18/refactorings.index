@@ -1,0 +1,45 @@
+1587947569559	Copy compilation unit
+1587951786763	Encapsulate field 'persue'
+1587951791417	Encapsulate field 'star_rate'
+1588032520137	Rename package 'yaksa.member.dao.dao'
+1588032532021	Rename package 'yaksa.member.fxml.fxml'
+1588032539714	Rename package 'yaksa.member.ibatis.ibatis'
+1588032552179	Rename package 'yaksa.member.service.service'
+1588032559384	Rename package 'yaksa.member.vo.vo'
+1588034492190	Delete element
+1588034562375	Delete element
+1588038848534	Delete element
+1588039085948	Delete element
+1588039088369	Delete element
+1588039091463	Delete element
+1588044364824	Rename package 'yaksa.member.controller.controller'
+1588044374139	Rename package 'yaksa.member.fxml.fxml'
+1588049877724	Rename resource 'example.fxml'
+1588050694266	Rename package 'yaksa.member.dao.search'
+1588069458783	Copy files
+1588072831168	Copy file
+1588072943130	Rename resource 'alert.fxml'
+1588072976210	Copy compilation unit
+1588073087348	Copy file
+1588073102897	Copy file
+1588073123434	Copy compilation unit
+1588122219445	Copy compilation unit
+1588122233044	Delete element
+1588122237032	Copy compilation unit
+1588122257890	Copy file
+1588122272441	Rename resource 'alert.fxml'
+1588123070691	Copy compilation units
+1588123076802	Rename type 'IMemDao'
+1588123082186	Rename type 'MemDaoImpl'
+1588123100402	Copy compilation units
+1588123106822	Rename type 'IMemService'
+1588123112681	Rename type 'MemServiceImpl'
+1588124485371	Copy package
+1588124540143	Copy package
+1588124574942	Copy package
+1588124849586	Copy package
+1588125248805	Delete element
+1588125267080	Delete element
+1588125272185	Delete element
+1588127559769	Rename resource 'res'
+1588127574806	Copy files
